@@ -51,13 +51,13 @@ This is the position of the ticker. The default is bottom. It can also be set to
 Implementing this Plugin:
 
 There are two files that you need to use, newsticker.js and newsticker.swf. Upload these files to your server, they can go anywhere on the server, but make sure you upload both of them to the same directory. Now, inside of your JW Player embed code, make sure that your plugins call points to the full path to the .js file on your server (http://www.yoursite.com/newsticker.js), don't worry about the .swf, it is already referenced in the newsticker.js file. 
+
 Example:
 
 <pre>
 &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 jwplayer('player').setup({
-&nbsp;&nbsp;'primary':'flash',
 &nbsp;&nbsp;'width': '575',
 &nbsp;&nbsp;'height': '400',
 &nbsp;&nbsp;'file': 'video.mp4'
