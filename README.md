@@ -69,3 +69,5 @@ jwplayer('player').setup({
 });
 &lt;/script&gt;
 </pre>
+
+The source code is available in this plugin as well. There is a .as file for Flash, and a .js file for JavaScript. Compiling can be done in ANT, using the Flex SDK, or simply using Flash, as I have included a .fla file as well. The JW6 library is included as well (jwplayer-6-lib.swc). All assets for the images embedded in the plugin are available as well. Publishing the JavaScipt can be simply done with any text editor. Enjoy~! :) 
