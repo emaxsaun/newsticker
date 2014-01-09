@@ -1,0 +1,61 @@
+<plugin>
+	<title>NewsTicker</title>
+	<filename>newsticker.swf</filename>
+	<version>1.3</version>
+	<compatibility>Compatible with 5.0+</compatibility>
+	<author>Ethan Feldman</author>
+	<description>
+	This plugin creates a block of scrolling text on the player, similar to a news ticker.
+	You can set the text with the flashvar newsticker.text.
+	You can set the speed at which the text scrolls with the flashvar newsticker.scrollspeed.
+	By default, the text scrolls from right to left, but you can reverse it by adding a - sign in front of the flashvar.
+	You can set the position and size with the newsticker.position and newsticker.size flashvars.
+	You can use the player's lightcolor flashvar to change the text color, 
+	and the player's frontcolor flashvar to change the background of the ticker.
+	By default the background is gray, and the text is yellow.
+	You can set a link for the text, which will open in a new window, with the flashvar newsticker.link.
+	You can set additional width for the text, with the flashvar newsticker.textwidth. It is the additional times to mutiply the width of the textbox.
+	This plugin uses the player's dock. If you set the dock  flashvar to false, a button will show up on the control bar.
+	If you mouse over the message, it will stop. Moving the mouse off of the message will resume the scrolling.
+	This plugin now includes playlist support, using the jwplayer namespace. 
+	You can set a new flashvar called newsticker.nobutton to remove the dock icon / controlbar icon.
+	</description>
+	<href>http://www.ethanfeldman.net/</href>
+	<flashvars>
+		<flashvar>
+			<name>position</name>
+			<default>over</default>
+			<description>Position of the plugin.</description>
+		</flashvar>
+		<flashvar>
+			<name>size</name>
+			<default>0</default>
+			<description>Width or height of the plugin when not in the over state</description>
+		</flashvar>
+		<flashvar>
+			<name>text</name>
+			<default>Hello, thanks for downloading...feel free to change this message...</default>
+			<description>Text to add to the ticker</description>
+		</flashvar>
+		<flashvar>
+			<name>scrollspeed</name>
+			<default>3</default>
+			<description>Speed to scroll the text.</description>
+		</flashvar>
+		<flashvar>
+			<name>link</name>
+			<default></default>
+			<description>An optional link to go to when the text is clicked on</description>
+		</flashvar>
+		<flashvar>
+			<name>textwidth</name>
+			<default>1</default>
+			<description>Additional times to mutiply the width of the textbox.</description>
+		</flashvar>
+		<flashvar>
+			<name>nobutton</name>
+			<default>false</default>
+			<description>Set this to true if you want no dock icon / controlbar button.</description>
+		</flashvar>
+	</flashvars>
+</plugin>
