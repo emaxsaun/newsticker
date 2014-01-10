@@ -55,6 +55,7 @@ There are two files that you need to use, newsticker.js and newsticker.swf. Uplo
 Example:
 
 <pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;jwplayer.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 jwplayer('player').setup({
