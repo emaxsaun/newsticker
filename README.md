@@ -6,7 +6,7 @@ About this Plugin:
 
 This is a JW Player Plugin that creates a block of scrolling text on the player, similar to a news ticker.
 
-###[Demo](http://www.pluginsbyethan.com/github/newsticker.html/)
+###[Demo](http://www.pluginsbyethan.com/github/newsticker.html)
 
 Configuration Options:
 ==========
