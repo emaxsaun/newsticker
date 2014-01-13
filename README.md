@@ -2,10 +2,14 @@ NewsTicker
 ==========
 
 About this Plugin:
+==========
 
 This is a JW Player Plugin that creates a block of scrolling text on the player, similar to a news ticker.
 
+###[Demo](http://www.pluginsbyethan.com/github/newsticker.html/)
+
 Configuration Options:
+==========
 
 This plugin supports additional configuration options via flashvars. You can read about the available options below and see examples below.
 
@@ -49,10 +53,12 @@ Flashvar: position = bottom
 This is the position of the ticker. The default is bottom. It can also be set to top.
 
 Implementing this Plugin:
+==========
 
 There are two files that you need to use, newsticker.js and newsticker.swf. Upload these files to your server, they can go anywhere on the server, but make sure you upload both of them to the same directory. Now, inside of your JW Player embed code, make sure that your plugins call points to the full path to the .js file on your server (http://www.yoursite.com/newsticker.js), don't worry about the .swf, it is already referenced in the newsticker.js file. 
 
 Example:
+==========
 
 <pre>
 &lt;script type=&quot;text/javascript&quot; src=&quot;jwplayer.js&quot;&gt;&lt;/script&gt;
