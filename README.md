@@ -11,7 +11,7 @@ This is a JW Player Plugin that creates a block of scrolling text on the player,
 Configuration Options:
 ==========
 
-This plugin supports additional configuration options via flashvars. You can read about the available options below and see examples below.
+This plugin supports additional configuration options via flashvars.
 
 The following flashvars are supported by both Flash and HTML5:
 
