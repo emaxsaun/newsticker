@@ -18,18 +18,23 @@ The following flashvars are supported by both Flash and HTML5:
 Flashvar: newsticker.text = Hello, thanks for downloading...feel free to change this message...
 
 This flashvar is used to specify the text that shows up in the ticker. The default is - "Hello, thanks for downloading...feel free to change this message..."
+
 Flashvar: newsticker.scrollspeed = 3
 
 This flashvar is used to specify the speed to scroll the text. By default, the text scrolls from right to left, but you can reverse it by adding a - sign in front of the value. (In HTML5 the - sign does nothing, see below).
+
 Flashvar: newsticker.link = URL
 
 This flashvar is used to specify an optional link to go to when the text is clicked on.
+
 Flashvar: newsticker.linktarget = _blank
 
 This flashvar is used to specify the link target for when the link is clicked on. The default is _blank. The other possible options are _self, _parent, or _top.
+
 Flashvar: newsticker.nobutton = false
 
 If you set this flashvar to true, the dock icon will not be visible.
+
 Flashvar: textcolor = yellow
 
 This is the color of the text. The default is yellow. It accepts any color or hex value.
@@ -38,17 +43,21 @@ Flashvar: backgroundcolor = grey
 This is the color of the text. The default is grey. It accepts any color or hex value.
 
 The following flashvars are supported by Flash only:
+
 Flashvar: dock = true
 
 If you set this flashvar to false, the dock icon will not be visible.
+
 Flashvar: newsticker.textwidth = 1
 
 This flashvar is used to specify the additional times to mutiply the width of the textbox. This is not needed by HTML5 (see below).
 
 The following flashvars are supported by HTML5 only:
+
 Flashvar: scrolldirection = left
 
 This is the direction that the text scrolls in. By default it is left. It can also be changed to right.
+
 Flashvar: position = bottom
 
 This is the position of the ticker. The default is bottom. It can also be set to top.
