@@ -14,6 +14,7 @@ Configuration Options:
 This plugin supports additional configuration options via flashvars. You can read about the available options below and see examples below.
 
 The following flashvars are supported by both Flash and HTML5:
+
 Flashvar: newsticker.text = Hello, thanks for downloading...feel free to change this message...
 
 This flashvar is used to specify the text that shows up in the ticker. The default is - "Hello, thanks for downloading...feel free to change this message..."
