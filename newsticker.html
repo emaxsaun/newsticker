@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NewsTicker</title>
+</head>
+<body>
+<script type="text/javascript" src="http://p.jwpcdn.com/6/8/jwplayer.js"></script>
+<div id="player2"></div>
+<script type="text/javascript">
+jwplayer("player2").setup({
+	image: "http://content.bitsontherun.com/thumbs/i8oQD9zd-640.jpg",
+    file: "http://content.bitsontherun.com/videos/i8oQD9zd-kNspJqnJ.mp4",
+	primary: "flash",
+	plugins: {
+		"newsticker.js": {
+			'text':'Hi, thanks for checking this plugin out on GitHub!'
+		}
+	}
+});
+</script>
+<br />
+<div id="player"></div>
+<script type="text/javascript">
+jwplayer("player").setup({
+	image: "http://content.bitsontherun.com/thumbs/i8oQD9zd-640.jpg",
+    file: "http://content.bitsontherun.com/videos/i8oQD9zd-kNspJqnJ.mp4",
+	plugins: {
+		"newsticker.js": {
+			'text':'Hi, thanks for checking this plugin out on GitHub!'
+		}
+	}
+});
+</script>
+</body>
+</html>
