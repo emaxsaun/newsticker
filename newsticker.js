@@ -1,7 +1,6 @@
 jwplayer().registerPlugin('newsticker', '6.0', function(player, config, newsticker){
-	//set up
-	function setup(evt) {
-		//html5 mode only
+	//setup
+	function setup(evt) {	
 		if (player.getRenderingMode() == "html5"){
 		var theBody = document.getElementById(player.id);
 		var playerWidthPX2 = player.getHeight();
@@ -57,9 +56,14 @@ jwplayer().registerPlugin('newsticker', '6.0', function(player, config, newstick
 		newsticker1.style.fontFamily = 'arial,_sans';
 		newsticker1.style.position = "absolute";
 		newsticker1.style.zIndex = "1000";
+		newsticker1.style.width = player.getWidth()+"px";
+		newsticker1.style.top = player.getHeight()+"px";
 		if (config.position == "top"){
 		newsticker1.style.top = playerHeightPX - playerHeightPX + 2 +"px";
 		bg.style.top = playerHeightPX - playerHeightPX + "px";
+		} else {
+		newsticker1.style.top = player.getHeight()-18+"px";
+		bg.style.top = player.getHeight()-20+"px";
 		}
 		theBody.appendChild(bg);
 		theBody.appendChild(newsticker1);
@@ -84,10 +88,14 @@ jwplayer().registerPlugin('newsticker', '6.0', function(player, config, newstick
 	player.onReady(setup);
 	var txt = new String("is_on");
     this.resize = function(width, height) {
+	if(player.getFullscreen() == true){
+			player.removeButton("newstickerdock");
+		} else {
 		player.addButton("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAdCAYAAADLnm6HAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAABeUlEQVR42mL8//8/w0ACgABiYhhgABBAA+4AgABigdIOUFoAiPWh7IlA/AGLHgcsYg+g2ABqBoyPDShAMQh8AAggBlAa+I8d9EPl0DE2UI9HDh/YDxBA+KKgAIgDSAhNAXKiACCACKWB+SQY7ECOAwACiIUIX60HYkciQ+AAWrpIwKJuAjStgMAFgACCxet5AnFVgJQGsKlNwJJWHHCYhaIOIICY4KkRP6hHcvUHHLmALAAQQEwkJLD5tCgHAAKIlIIIFAL91HYAQADhc8AGHFnTgJoOAAggfA6YiJaqKcrvuABAABGKgkAiEihFACCACDkAZHkimWYLECMOEEBMRJRiG6CFB6lAH09ihgOAACI2FxSCSy0aAIAAIiUbJtIiPQAEECkOAIVAI7UdABBAsMqogcjiFZYW+IlQe5AYcwECiHGgG6UAATTgbUKAABpwBwAEECgNnBlIBwAEEOP/AU4EAAE04FEAEECgKGAcSAcABNCAhwBAgAEAT8sXNkFY65kAAAAASUVORK5CYII%3D", 
             "NewsTicker", 
             function() { NewsTickerToggle(); }, 
             "newstickerdock");
+		}
 	if (config.nobutton == "true" || config.nobutton == true){
 		player.removeButton("newstickerdock");
 	}
@@ -95,24 +103,6 @@ jwplayer().registerPlugin('newsticker', '6.0', function(player, config, newstick
 	var theNt = document.getElementById('newsticker1');
 	theNt.style.visibility = "visible";
 	theBg.style.visibility = "visible"
-	if (config.position == "top" || config.position == top){
-		newsticker1.style.top = player.getHeight() - player.getHeight() + 2 +"px";
-		bg.style.top = player.getHeight() - player.getHeight() +"px";
-		newsticker1.style.width = player.getWidth()+"px";
-		bg.style.width = player.getWidth()+"px";
-	} else {
-	if(player.getFullscreen() == true){
-		newsticker1.style.top = player.getHeight() - 20 +"px";
-		bg.style.top = player.getHeight() - 20 +"px";
-		newsticker1.style.width = player.getWidth()+"px";
-		bg.style.width = player.getWidth()+"px";
-	} else if(player.getFullscreen() == false){
-		newsticker1.style.top = player.getHeight() - 20 +"px";
-		bg.style.top = player.getHeight() - 20 +"px";
-		newsticker1.style.width = player.getWidth()+"px";
-		bg.style.width = player.getWidth()+"px";
-	}
-	}
 	NewsTickerToggle = function(){
 	if(theNt.style.visibility == "visible" && theBg.style.visibility == "visible"){
 		theNt.style.visibility = "hidden";
@@ -133,8 +123,8 @@ jwplayer().registerPlugin('newsticker', '6.0', function(player, config, newstick
 	theBg.style.visibility = "hidden";
 	}
 	if(player.getFullscreen() == true && txt == "is_on") {
-	theNt.style.visibility = "visible";
-	theBg.style.visibility = "visible";
+	theNt.style.visibility = "hidden";
+	theBg.style.visibility = "hidden";
 	} 
 	if(player.getFullscreen() == false && txt == "is_on"){
 	theNt.style.visibility = "visible";
